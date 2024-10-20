@@ -50,7 +50,7 @@ export default function DietGenerator() {
   
   const saveDiet = async () =>  {
       try {
-          const response = await fetch(`http://${process.env.REACT_APP_API_URL || 'localhost:8000/api'}/save-diet/${parsedCookies.username}/`, {
+          const response = await fetch(`${process.env.REACT_APP_API_URL || 'localhost:8000/api'}/save-diet/${parsedCookies.username}/`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
