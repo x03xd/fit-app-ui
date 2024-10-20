@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Calculator from './Calculator';
 import DietGenerator from './DietGenerator';
 import { parsedCookies } from '../consts.js';
@@ -9,6 +9,12 @@ import '../styles/Profile.css';
 export default function Profile() {
   const { logout } = useContext(AuthContext);
   const [activeTab, setActiveTab] = useState('calculator');
+
+  useEffect(() => {
+      if (parsedCookies.username === undefined || parsedCookies.email === undefined) {
+          window.location.reload();
+      }
+  }, []);
 
   const renderContent = () => {
     switch (activeTab) {
