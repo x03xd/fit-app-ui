@@ -9,6 +9,16 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Calculator from './components/Calculator';
 import DietGenerator from './components/DietGenerator';
 import Profile from './components/Profile';
+import * as Sentry from '@sentry/react';
+import { Integrations } from '@sentry/tracing';
+
+Sentry.init({
+  dsn: process.env.REACT_APP_SENTRY_URL,
+  integrations: [
+    new Integrations.BrowserTracing(),
+  ],
+  tracesSampleRate: 1.0,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
