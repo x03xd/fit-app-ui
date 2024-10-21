@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../styles/DietGenerator.css';
 import { baseDiet, parsedCookies } from '../consts.js';
 
+
 export default function DietGenerator() {
   const [calorieIntake, setCalorieIntake] = useState('');
   const [dietType, setDietType] = useState('balanced');
@@ -110,7 +111,7 @@ export default function DietGenerator() {
           <p><strong>Total Calories:</strong> {diet.totalCalories} kcal</p>
         </div>
       )}
-      <p className="api-info">You can access the diet information at <strong>/api/show-diet/{parsedCookies.username}</strong>.</p>
+      <p className="api-info">You can access the diet information at <strong>/api/show-diet/{parsedCookies.username}/</strong>.</p>
     </div>
   );
 }
