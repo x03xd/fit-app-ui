@@ -16,6 +16,7 @@ Aplikacja Fitness to interaktywna platforma stworzona w technologii React, któr
   - Aktywność fizyczna
 - **Podgląd profilu**: Użytkownicy mogą przeglądać swoje dane oraz postępy w odchudzaniu.
 - **Program sugerujący dietę**: Na podstawie wprowadzonych danych oraz preferencji dietetycznych, aplikacja rekomenduje odpowiednie plany dietetyczne dostosowane do potrzeb użytkownika.
+- **Sentry**: Aplikacja jest zintegrowana z systemem Sentry, który monitoruje działanie aplikacji oraz zbiera informacje o ewentualnych błędach.
 
 ## Testy jednostkowe
 
